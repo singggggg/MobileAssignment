@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MobileAssignment</string>
+    <string name="HelloWorld">Hello World</string>
 </resources>
