@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MobileAssignment</string>
     <string name="HelloWorld">Hello World</string>
+    <string name="testingBtn">testingXr</string>
 </resources>
