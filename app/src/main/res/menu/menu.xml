@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/ic_home"
+        android:id="@+id/menu_recommendation"
+        android:icon="@drawable/chat"
+        android:title="@string/menu_recommendation" />
+    <item
+        android:id="@+id/menu_mealPlan"
+        android:icon="@drawable/dinner"
+        android:title="@string/menu_mealPlan" />
+    <item
+        android:id="@+id/menu_homepage"
         android:icon="@drawable/ic_home"
-        android:title="@string/ic_home" />
-
+        android:title="@string/menu_homepage" />
+    <item
+        android:id="@+id/menu_menu"
+        android:icon="@drawable/menu"
+        android:title="@string/menu_menu" />
+    <item
+        android:id="@+id/menu_cart"
+        android:icon="@drawable/cart"
+        android:title="@string/menu_cart" />
 </menu>

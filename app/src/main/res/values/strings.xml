@@ -1,13 +1,16 @@
 <resources>
     <string name="app_name">MobileAssignment</string>
     <string name="HelloWorld">Hello World</string>
-    <string name="testingBtn">testingXr</string>
-    <string name="testallex">test alex</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="ic_home">Homepage</string>
-    <string name="titleLbl">Homepage</string>
+    <!-- TODO: Remove or change this placeholder text -->、
+    <string name="menu_homepage">Homepage</string>
+    <string name="menu_menu">Menu</string>
+    <string name="menu_recommendation">Recommendation</string>
+    <string name="menu_mealPlan">Meal Plan</string>
+    <string name="menu_cart">Cart</string>
+<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+<!--    <string name="ic_home">Homepage</string>-->
+<!--    <string name="titleLbl">Homepage</string>-->
 </resources>
