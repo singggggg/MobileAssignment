@@ -1,8 +1,10 @@
 package com.example.mobileassignment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
 import com.example.mobileassignment.Fragment.*
@@ -31,6 +33,13 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        val chgRoleBtn = findViewById<Button>(R.id.changeRoleBtn)
+        chgRoleBtn.setOnClickListener{
+            val intent = Intent(this,AdminMainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment){

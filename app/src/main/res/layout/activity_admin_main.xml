@@ -4,34 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AdminMainActivity">
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btmNav"
+        app:layout_constraintBottom_toTopOf="@+id/btmNav_Admin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" >
-
-        <Button
-            android:id="@+id/changeRoleBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/changeRole" />
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btmNav"
+        android:id="@+id/btmNav_Admin"
         android:layout_width="416dp"
         android:layout_height="92dp"
+        android:background="@color/purple_500"
         app:itemIconSize="36dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu" />
+        app:menu="@menu/admin_menu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

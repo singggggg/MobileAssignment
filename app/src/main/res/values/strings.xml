@@ -10,7 +10,11 @@
     <string name="menu_recommendation">Recommendation</string>
     <string name="menu_mealPlan">Meal Plan</string>
     <string name="menu_cart">Cart</string>
-<!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
-<!--    <string name="ic_home">Homepage</string>-->
-<!--    <string name="titleLbl">Homepage</string>-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ic_home">Homepage</string>
+    <string name="titleLbl">Homepage</string>
+    <string name="ic_menuAdmin">ic_menu</string>
+    <string name="ic_orderAdmin">ic_order</string>
+    <string name="ic_recommendationAdmin">ic_recommendation</string>
+    <string name="changeRole">Change Role</string>
 </resources>
