@@ -17,4 +17,9 @@
     <string name="ic_orderAdmin">ic_order</string>
     <string name="ic_recommendationAdmin">ic_recommendation</string>
     <string name="changeRole">Change Role</string>
+    <string name="email">Email</string>
+    <string name="create_account">Don\'t have an account? Create here</string>
+    <string name="create">Create New Account</string>
+    <string name="register">Register</string>
+    <string name="already_register">Already Register? Login here</string>
 </resources>
