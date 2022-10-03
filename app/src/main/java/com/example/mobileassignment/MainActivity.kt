@@ -1,10 +1,12 @@
 package com.example.mobileassignment
 
+import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.icu.util.TimeZone
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
@@ -38,6 +40,13 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        val chgRoleBtn = findViewById<Button>(R.id.changeRoleBtn)
+        chgRoleBtn.setOnClickListener{
+            val intent = Intent(this,AdminMainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment){
