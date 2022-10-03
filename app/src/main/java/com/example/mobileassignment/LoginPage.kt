@@ -50,32 +50,35 @@ class LoginPage : AppCompatActivity() {
         }
     }
 
-    private fun performLogin(){
-        val email:EditText = findViewById(R.id.email)
-        val password:EditText = findViewById(R.id.password)
+    private fun performLogin() {
+        val email: EditText = findViewById(R.id.email)
+        val password: EditText = findViewById(R.id.password)
 
-        if(email.text.isEmpty() || password.text.isEmpty()){
-            Toast.makeText(this,"Please enter all fields.",Toast.LENGTH_SHORT)
-                .show()
-        }
+        if (email.text.isEmpty() || password.text.isEmpty()) {
+            Toast.makeText(this, "Please enter all fields.", Toast.LENGTH_SHORT).show()
+        } else {
 
-        val emailInput = email.text.toString()
-        val passwordInput = password.text.toString()
+            val emailInput = email.text.toString()
+            val passwordInput = password.text.toString()
 
-        auth.signInWithEmailAndPassword(emailInput, passwordInput)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    updateUI(auth.currentUser)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
+            auth.signInWithEmailAndPassword(emailInput, passwordInput)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        updateUI(auth.currentUser)
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT)
+                            .show()
+                    }
                 }
-            }
-            .addOnFailureListener{
-                Toast.makeText(baseContext, "Authentication failed. ${it.localizedMessage}",
-                    Toast.LENGTH_SHORT).show()
-            }
+                .addOnFailureListener {
+                    Toast.makeText(
+                        baseContext, "Authentication failed. ${it.localizedMessage}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
 
+        }
     }
     private fun updateUI(currentUser:FirebaseUser?){
         if (currentUser != null) {
