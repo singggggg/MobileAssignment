@@ -16,6 +16,34 @@
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
+            android:name=".UpdateRecommendationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateRecommendationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AddRecommentdationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".MealDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDeleteMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminViewMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUpdateMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAddMeal"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <activity
@@ -33,10 +61,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

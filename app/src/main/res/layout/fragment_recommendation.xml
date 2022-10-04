@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.503"
-        tools:listitem="@layout/recommendation_items" />
+        tools:listitem="@layout/recommendation_admin_items" />
 
     <TextView
         android:id="@+id/tv_Recommendation"
