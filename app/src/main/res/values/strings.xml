@@ -55,8 +55,11 @@
     <string name="forgotpw_title">Forget Password</string>
     <string name="forgotpwdetail">Enter your email to receive the reset link.</string>
     <string name="submit">Submit</string>
+    <string name="profile">Profile</string>
     <string-array name="role">
         <item>User</item>
         <item>Admin</item>
     </string-array>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
 </resources>
