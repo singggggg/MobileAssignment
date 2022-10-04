@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "819946993113",
-    "firebase_url": "https://mobileassignment-f8abe-default-rtdb.firebaseio.com",
-    "project_id": "mobileassignment-f8abe",
-    "storage_bucket": "mobileassignment-f8abe.appspot.com"
+    "project_number": "935957237644",
+    "firebase_url": "https://bait2073-mobile-assignment-default-rtdb.firebaseio.com",
+    "project_id": "bait2073-mobile-assignment",
+    "storage_bucket": "bait2073-mobile-assignment.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:819946993113:android:04cf4ca6fc734a77c795c8",
+        "mobilesdk_app_id": "1:935957237644:android:582c2b3afba3d0dbdb50a9",
         "android_client_info": {
           "package_name": "com.example.mobileassignment"
         }
       },
       "oauth_client": [
         {
-          "client_id": "819946993113-oh22oafrk8716g0pkfj946rli1midv5h.apps.googleusercontent.com",
+          "client_id": "935957237644-25ir4psnjaoft21fjbphv43k226b8g5b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBAsLsc0yQkt21ekqEoRIYDEHGEqSQTCRQ"
+          "current_key": "AIzaSyDj8pKfIdoOCfk1Of2BQfnhoyKJsPFvnL4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "819946993113-oh22oafrk8716g0pkfj946rli1midv5h.apps.googleusercontent.com",
+              "client_id": "935957237644-25ir4psnjaoft21fjbphv43k226b8g5b.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

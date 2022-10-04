@@ -28,6 +28,9 @@
             android:name=".AdminAddMeal"
             android:exported="false" />
         <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".AdminMainActivity"
             android:exported="false" />
         <activity
@@ -42,6 +45,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
