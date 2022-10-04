@@ -17,4 +17,19 @@
     <string name="ic_orderAdmin">ic_order</string>
     <string name="ic_recommendationAdmin">ic_recommendation</string>
     <string name="changeRole">Change Role</string>
+    <string name="title_activity_recommendation_details">RecommendationDetails</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="DailyCalories">Daily Calories Consumed</string>
+    <string name="WeeklyCalories">Weekly Calories Consumed</string>
+    <string name="MonthlyCalories">Monthly Calories Consumed</string>
+    <string name="mealPlanWeek">Meal For This Week</string>
+    <string name="eatHeal">Eat Heal</string>
+    <string name="slogan">Eat Right Be Bright</string>
 </resources>

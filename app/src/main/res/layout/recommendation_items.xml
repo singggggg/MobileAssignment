@@ -34,11 +34,13 @@
 
             <TextView
                 android:id="@+id/tv_recTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
+                android:text="jijijji"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,7 +49,7 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/like"
+                    android:id="@+id/btn_like"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:button="@drawable/ic_like_unchecked"
@@ -65,11 +67,11 @@
                     android:id="@+id/tv_recLikeAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
 
                 <CheckBox
-                    android:id="@+id/dislike"
+                    android:id="@+id/btn_dislike"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:button="@drawable/ic_dislike_unchecked"
@@ -87,7 +89,7 @@
                     android:id="@+id/tv_recDislikeAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="5dp" />
 
             </LinearLayout>

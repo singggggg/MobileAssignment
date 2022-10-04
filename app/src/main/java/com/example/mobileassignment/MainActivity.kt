@@ -11,12 +11,17 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
 import com.example.mobileassignment.Fragment.*
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.ktx.database
+
 import kotlinx.android.synthetic.main.activity_main.*
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,22 +36,42 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btmNav.setOnItemSelectedListener {
+            val tab = findViewById<MaterialToolbar>(R.id.topAppBar)
+
             when(it.itemId){
-                R.id.menu_recommendation-> replaceFragment(recommendationFragment)
-                R.id.menu_mealPlan-> replaceFragment(mealPlanFragment)
-                R.id.menu_homepage-> replaceFragment(homepageFragment)
-                R.id.menu_menu-> replaceFragment(menuFragment)
-                R.id.menu_cart-> replaceFragment(cartFragment)
+                R.id.menu_recommendation-> {
+                    tab.title = "Recommendation";
+                    replaceFragment(recommendationFragment)
+                }
+                R.id.menu_mealPlan-> {
+                    tab.title = "Meal Plan";
+                    replaceFragment(mealPlanFragment)
+                }
+                R.id.menu_homepage-> {
+                    tab.title = "Eat Heal";
+                    replaceFragment(homepageFragment)
+                }
+                R.id.menu_menu-> {
+                    tab.title = "Menu";
+                    replaceFragment(menuFragment)
+                }
+                R.id.menu_cart-> {
+                    tab.title = "Cart";
+                    create()
+                    /*replaceFragment(cartFragment)*/
+                }
             }
             true
         }
+
+        //set homepage as default
+        btmNav.selectedItemId = R.id.menu_homepage
 
         val chgRoleBtn = findViewById<Button>(R.id.changeRoleBtn)
         chgRoleBtn.setOnClickListener{
             val intent = Intent(this,AdminMainActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     private fun replaceFragment(fragment: Fragment){
@@ -56,6 +81,24 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.fragment_container,fragment)
             transaction.commit()
         }
+    }
+
+    fun replaceFrag(fragment: Fragment){
+        replaceFragment(fragment)
+    }
+
+    var i:Int = 1
+
+    fun create(){
+        val db = Firebase.database
+        val myRef = db.getReference("MealPlan")
+
+        val mp = MealPlan("EpalpalMeal","280","0","28-9-2022")
+
+        myRef.child("EpalpalMeal"+i).setValue(mp).addOnCompleteListener {
+            Toast.makeText(applicationContext, "Mp saved successful", Toast.LENGTH_LONG).show()
+        }
+        i++
     }
 
 /*    private fun getCurrentMillisDateTime(): Long?{

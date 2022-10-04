@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:verticalScrollbarPosition="left"
+    tools:context=".RecommendationDetails">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:buttonGravity="top"
+                app:menu="@menu/top_menu"
+                app:title="EatHeal"
+                app:titleCentered="true" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/layout_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNav"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tv_recDetail_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_recDetails_uploadDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="date"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/layout_bg2"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_recDetails_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tv_recDetails_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="horizontal"
+                android:textSize="16sp"
+                android:verticalScrollbarPosition="right"
+                tools:text="dasvdgasvdfgha svdghav sdgasf ytd asdv asghc vsgyd vaytgdv at casgvfytas vctyas vcytas vct avcadvcytadv cgadv cyasdv ctadv ctgadv c ugadv cyuawv cuwedvc hujgwrevb cyhwb vyhebvyerwbvhwfb vhiweb vybcvyhwesbv ywedfbv yuef vhuiedf vbcgdhusfvb dfgyusvcb jfgv jserb ftyuebfgyuhse ygfvsedtyfvb sdghu vghudsfbvgusdf vbsdghuv ghusdfbv ughsd bvhusdfb vusdfbv usdhbfvsdhuib fvuhsdbv usdbvuesb iyfv ebsyrui gwesrbuygsbfeuyvusedf gvyseu gbyu vbeyudrvb sdyuvb yuedfsb vyuhseb tyuserb vyuesgyuvbdsfyuh vbefv bseryu bveyu vbuseyh bvudsfbvhudfb vuysdb vysedrvb yuerg 38yvber68fy3eg yug 8yug e5yutg he578g th57u8w3 73 gh5t78ehvge vbertbv oisyudvglbusdfhivg785e49r gbhvui hh 37589eg heug hu79s3eh y47 a3sewujg hu9es7 ghr479 ew79g h789oesw 4hua gruefvg hf7urhvg y7u84r hy7ruagh4r5gth7s45 3e 7w7u yhe7 ytgh783e hyguehu7rg yfh7rhg bfuv7 hr479 yghw3e fgta789u34gf7uer gsg5 yhser45hge45yh8pe49ytgh p;e.shygt987 3h5rftg epghyf79e48 r5ftgyhpn9g fyh457pyht 3e5 79ey hr97" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

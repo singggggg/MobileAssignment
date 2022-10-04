@@ -8,5 +8,4 @@
         android:title="SideMenu"
         app:showAsAction="ifRoom" />
 
-
 </menu>
