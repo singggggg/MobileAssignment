@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileAssignment">
         <activity
+            android:name=".UpdateRecommendationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateRecommendationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AddRecommentdationActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminMainActivity"
             android:exported="false" />
         <activity

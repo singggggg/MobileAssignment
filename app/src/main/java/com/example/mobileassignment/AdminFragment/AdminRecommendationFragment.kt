@@ -1,11 +1,16 @@
 package com.example.mobileassignment.AdminFragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.mobileassignment.Admin.AddRecommentdationActivity
 import com.example.mobileassignment.R
+import com.example.mobileassignment.UpdateRecommendationListActivity
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,6 +41,25 @@ class AdminRecommendationFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_admin_recommendation, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val btn = view.findViewById<Button>(R.id.UserBtn)
+        btn.setOnClickListener{
+            val intent = Intent(this.context, AddRecommentdationActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        val btnUpdate : Button = view.findViewById(R.id.updateRecBtn)
+        btnUpdate.setOnClickListener{
+            val intent = Intent(this.context, UpdateRecommendationListActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     companion object {

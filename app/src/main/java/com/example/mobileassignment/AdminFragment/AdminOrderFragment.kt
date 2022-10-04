@@ -1,10 +1,14 @@
 package com.example.mobileassignment.AdminFragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.mobileassignment.AdminMainActivity
+import com.example.mobileassignment.LoginPage
 import com.example.mobileassignment.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,7 +40,10 @@ class AdminOrderFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_admin_order, container, false)
+
     }
+
+
 
     companion object {
         /**

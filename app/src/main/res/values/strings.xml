@@ -17,4 +17,17 @@
     <string name="ic_orderAdmin">ic_order</string>
     <string name="ic_recommendationAdmin">ic_recommendation</string>
     <string name="changeRole">Change Role</string>
+    <string name="addNewRec">Add New</string>
+    <string name="recName">Recommendation Name</string>
+    <string name="recDesc">Reccomendation  Description</string>
+    <string name="subBtn">Submit</string>
+    <string name="uploadTime">Upload Time</string>
+    <string name="nameTitle_TextView">Title Name</string>
+    <string name="description_TextView">Description</string>
+    <string name="time_TextView">"Time Post : "</string>
+    <string name="like_TextView">Like</string>
+    <string name="dislike_TextView">Dislike</string>
+    <string name="retrieveBtn">Retrieve</string>
+    <string name="updateBtn">Update</string>
+    <string name="deleteBtn">Delete</string>
 </resources>
