@@ -17,6 +17,48 @@
     <string name="ic_orderAdmin">ic_order</string>
     <string name="ic_recommendationAdmin">ic_recommendation</string>
     <string name="changeRole">Change Role</string>
+    <string name="addNewRec">Add New</string>
+    <string name="recName">Recommendation Name</string>
+    <string name="recDesc">Reccomendation  Description</string>
+    <string name="subBtn">Submit</string>
+    <string name="uploadTime">Upload Time</string>
+    <string name="nameTitle_TextView">Title Name</string>
+    <string name="description_TextView">Description</string>
+    <string name="time_TextView">"Time Post : "</string>
+    <string name="like_TextView">Like</string>
+    <string name="dislike_TextView">Dislike</string>
+    <string name="retrieveBtn">Retrieve</string>
+    <string name="updateBtn">Update</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="EnterMealName">Enter Meal Name</string>
+    <string name="MealDescription">Meal Description</string>
+    <string name="Price">Price</string>
+    <string name="name_textView">Name</string>
+    <string name="desc">Description</string>
+    <string name="price">Price</string>
+    <string name="Category">Category</string>
+
+    <string-array name="MealCat">
+        <item>Ala-Cart</item>
+        <item>Weekly Meal Plan</item>
+        <item>Monthly Meal Plan</item>
+    </string-array>
+    <string name="email">Email</string>
+    <string name="create_account">Don\'t have an account? Create here</string>
+    <string name="create">Create New Account</string>
+    <string name="register">Register</string>
+    <string name="already_register">Already Register? Login here</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="forgetpw">Forget password?</string>
+    <string name="signout">Sign Out</string>
+    <string name="forgotpw_title">Forget Password</string>
+    <string name="forgotpwdetail">Enter your email to receive the reset link.</string>
+    <string name="submit">Submit</string>
+    <string-array name="role">
+        <item>User</item>
+        <item>Admin</item>
+    </string-array>
     <string name="title_activity_recommendation_details">RecommendationDetails</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

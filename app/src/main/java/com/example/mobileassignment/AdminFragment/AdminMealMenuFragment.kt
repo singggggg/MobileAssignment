@@ -1,10 +1,16 @@
 package com.example.mobileassignment.AdminFragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.mobileassignment.AdminAddMeal
+import com.example.mobileassignment.AdminDeleteMeal
+import com.example.mobileassignment.AdminUpdateMeal
+import com.example.mobileassignment.AdminViewMeal
 import com.example.mobileassignment.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -56,5 +62,37 @@ class AdminMealMenuFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val MealAddBtn=view.findViewById<Button>(R.id.Meal_AddBtn)
+        val MealUpdateBtn=view.findViewById<Button>(R.id.Meal_UpdateBtn)
+        val MealViewBtn=view.findViewById<Button>(R.id.Meal_ViewBtn)
+        val MealDeleteBtn=view.findViewById<Button>(R.id.Meal_DeleteBtn)
+
+        MealAddBtn.setOnClickListener {
+            val intent = Intent(this.context, AdminAddMeal::class.java)
+            startActivity(intent)
+        }
+
+        MealUpdateBtn.setOnClickListener{
+            val intent = Intent(this.context, AdminUpdateMeal::class.java)
+            startActivity(intent)
+        }
+
+        MealViewBtn.setOnClickListener{
+            val intent = Intent(this.context, AdminViewMeal::class.java)
+            startActivity(intent)
+        }
+
+        MealDeleteBtn.setOnClickListener{
+            val intent = Intent(this.context, AdminDeleteMeal::class.java)
+            startActivity(intent)
+        }
+
+
+
     }
 }

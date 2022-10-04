@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
 import com.example.mobileassignment.Fragment.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.database.ktx.database
@@ -22,7 +23,6 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
 
-
 class MainActivity : AppCompatActivity() {
 
     private val recommendationFragment = RecommendationFragment()
@@ -31,9 +31,14 @@ class MainActivity : AppCompatActivity() {
     private val menuFragment = MenuFragment()
     private val cartFragment = CartFragment()
 
+    private lateinit var user:FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        user = FirebaseAuth.getInstance()
+        val signOut_btn:Button = findViewById(R.id.signOut_btn)
 
         btmNav.setOnItemSelectedListener {
             val tab = findViewById<MaterialToolbar>(R.id.topAppBar)
@@ -72,6 +77,14 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,AdminMainActivity::class.java)
             startActivity(intent)
         }
+
+        signOut_btn.setOnClickListener {
+            user.signOut()
+            val intent = Intent(this,LoginPage::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
     }
 
     private fun replaceFragment(fragment: Fragment){
@@ -81,24 +94,6 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.fragment_container,fragment)
             transaction.commit()
         }
-    }
-
-    fun replaceFrag(fragment: Fragment){
-        replaceFragment(fragment)
-    }
-
-    var i:Int = 1
-
-    fun create(){
-        val db = Firebase.database
-        val myRef = db.getReference("MealPlan")
-
-        val mp = MealPlan("EpalpalMeal","280","0","28-9-2022")
-
-        myRef.child("EpalpalMeal"+i).setValue(mp).addOnCompleteListener {
-            Toast.makeText(applicationContext, "Mp saved successful", Toast.LENGTH_LONG).show()
-        }
-        i++
     }
 
 /*    private fun getCurrentMillisDateTime(): Long?{

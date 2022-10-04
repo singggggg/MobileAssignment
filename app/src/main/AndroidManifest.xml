@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mobileassignment" >
 
     <application
@@ -14,12 +15,50 @@
             android:exported="false" />
         <activity
             android:name=".AdminMainActivity"
+            android:name=".UserProfile"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateRecommendationDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateRecommendationListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AddRecommentdationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".MealDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDeleteMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminViewMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUpdateMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAddMeal"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
+            android:name=".AdminMainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

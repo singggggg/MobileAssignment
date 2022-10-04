@@ -25,13 +25,8 @@
                 android:layout_height="?attr/actionBarSize"
                 app:menu="@menu/top_menu"
                 app:title="EatHeal"
-                app:titleCentered="true">
-                <Button
-                    android:id="@+id/changeRoleBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/changeRole"/>
-            </com.google.android.material.appbar.MaterialToolbar>
+                app:titleCentered="true" />
+
         </com.google.android.material.appbar.AppBarLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -42,6 +37,33 @@
         app:layout_constraintBottom_toTopOf="@+id/btmNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topNav">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/changeRoleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/changeRole"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.084" />
+
+            <Button
+                android:id="@+id/signOut_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>
 
