@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isNotEmpty
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -48,7 +47,7 @@ class LoginPage : AppCompatActivity() {
             }
         }
 
-        if(roleSpinner.isNotEmpty()){
+        if(roleSpinner!=null){
             val adapter = ArrayAdapter(this,R.layout.spinner_list,role)
             roleSpinner.adapter = adapter
         }
@@ -139,13 +138,11 @@ class LoginPage : AppCompatActivity() {
                         }
                     }
                     user.signOut()
-                    Toast.makeText(this@LoginPage, "This is not an admin account.", Toast.LENGTH_SHORT)
-                        .show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                user.signOut()
             }
         })
     }

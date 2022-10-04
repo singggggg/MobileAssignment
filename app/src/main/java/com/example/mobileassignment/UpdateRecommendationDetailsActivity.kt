@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.recommendation_items.*
+import kotlinx.android.synthetic.main.recommendation_admin_items.*
 
 class UpdateRecommendationDetailsActivity : AppCompatActivity() {
 

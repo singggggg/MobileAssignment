@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.recommendation_items.*
+import kotlinx.android.synthetic.main.recommendation_admin_items.*
 
 class UpdateRecommendationListActivity : AppCompatActivity() {
 
@@ -96,59 +96,5 @@ class UpdateRecommendationListActivity : AppCompatActivity() {
 
 
     ///////////////////////////////////////////////////////
-
-    private fun openUpdateDialog(
-        //empId: String,
-        recName: String
-    ) {
-        val mDialog = AlertDialog.Builder(this)
-        val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.update_recommendation_dialog, null)
-
-        mDialog.setView(mDialogView)
-
-        val nameTitle = mDialogView.findViewById<EditText>(R.id.recNameET)
-        val desc = mDialogView.findViewById<EditText>(R.id.recDescET)
-        val uploadT = mDialogView.findViewById<EditText>(R.id.uploadTimeET)
-
-
-        val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
-
-        nameTitle.setText(intent.getStringExtra("recName").toString())
-        desc.setText(intent.getStringExtra("recDesc").toString())
-        uploadT.setText(intent.getStringExtra("uploadTime").toString())
-
-        mDialog.setTitle("Updating $recName Record")
-
-        val alertDialog = mDialog.create()
-        alertDialog.show()
-
-        btnUpdateData.setOnClickListener {
-            updateRecData(
-                nameTitle.text.toString(),
-                desc.text.toString(),
-                uploadT.text.toString()
-            )
-
-            Toast.makeText(applicationContext, "Recommendation Data Updated", Toast.LENGTH_LONG).show()
-
-            //we are setting updated data to our textviews
-            etNameTitle.text = etNameTitle.text.toString()
-            etDesc.text = etDesc.text.toString()
-            tvTime.text = tvTime.text.toString()
-
-            alertDialog.dismiss()
-        }
-    }
-
-    private fun updateRecData(
-        name: String,
-        desc: String,
-        uploadT: String
-    ) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("Recommendation")
-        val recInfo = RecommendationAdmin(name, desc, uploadT)
-        dbRef.setValue(recInfo)
-    }
 
 }
