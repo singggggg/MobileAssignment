@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +22,7 @@ class AdminUpdateMeal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_update_meal)
 
+        val bBtn = findViewById<Button>(R.id.b_button)
         mealRecyclerView = findViewById(R.id.rvMeal)
         mealRecyclerView.layoutManager = LinearLayoutManager(this)
         mealRecyclerView.setHasFixedSize(true)
@@ -29,6 +31,11 @@ class AdminUpdateMeal : AppCompatActivity() {
         mealList = arrayListOf<MealMenu>()
 
         getMealData()
+
+
+        bBtn.setOnClickListener{
+            this.finish()
+        }
 
     }
 
@@ -68,6 +75,7 @@ class AdminUpdateMeal : AppCompatActivity() {
                     tvLoadingData.visibility = View.GONE
                 }
             }
+
 
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")

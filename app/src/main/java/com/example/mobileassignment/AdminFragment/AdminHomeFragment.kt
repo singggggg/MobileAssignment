@@ -63,32 +63,5 @@ class AdminHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val MealAddBtn=view.findViewById<Button>(R.id.Meal_AddBtn)
-//        val MealUpdateBtn=view.findViewById<Button>(R.id.Meal_UpdateBtn)
-//        val MealViewBtn=view.findViewById<Button>(R.id.Meal_ViewBtn)
-//        val MealDeleteBtn=view.findViewById<Button>(R.id.Meal_DeleteBtn)
-//
-//        MealAddBtn.setOnClickListener {
-//            val intent = Intent(this.context, AdminAddMeal::class.java)
-//            startActivity(intent)
-//        }
-//
-//        MealUpdateBtn.setOnClickListener{
-//            val intent = Intent(this.context, AdminUpdateMeal::class.java)
-//            startActivity(intent)
-//        }
-//
-//        MealViewBtn.setOnClickListener{
-//            val intent = Intent(this.context, AdminViewMeal::class.java)
-//            startActivity(intent)
-//        }
-//
-//        MealDeleteBtn.setOnClickListener{
-//            val intent = Intent(this.context, AdminDeleteMeal::class.java)
-//            startActivity(intent)
-//        }
-
-
-
     }
 }

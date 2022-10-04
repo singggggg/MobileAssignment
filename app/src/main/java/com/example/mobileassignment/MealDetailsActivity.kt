@@ -22,6 +22,7 @@ class MealDetailsActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meal_details)
+        val bBtn = findViewById<Button>(R.id.b_button)
 
         initView()
         setValuesToViews()
@@ -35,6 +36,10 @@ class MealDetailsActivity: AppCompatActivity() {
 
             )
 
+        }
+
+        bBtn.setOnClickListener{
+            this.finish()
         }
     }
 
@@ -54,6 +59,7 @@ class MealDetailsActivity: AppCompatActivity() {
             val etDescription = mDialogView.findViewById<EditText>(R.id.etDescription)
             val etPrice = mDialogView.findViewById<EditText>(R.id.etPrice)
             val etCategory = mDialogView.findViewById<EditText>(R.id.etCategory)
+            val bBtn = findViewById<Button>(R.id.b_button)
 
             val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
@@ -87,6 +93,9 @@ class MealDetailsActivity: AppCompatActivity() {
                 alertDialog.dismiss()
             }
 
+            bBtn.setOnClickListener{
+                this.finish()
+            }
     }
 
         private fun updateMealData(

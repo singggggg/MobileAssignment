@@ -27,6 +27,7 @@ class AdminAddMeal : AppCompatActivity() {
         val mealGalBtn = findViewById<Button>(R.id.MealGallerybtn)
         val mealSubmitBtn = findViewById<Button>(R.id.MealSubmitBtn)
         val canBtn = findViewById<Button>(R.id.CancelBtn)
+        val bBtn = findViewById<Button>(R.id.b_button)
         val spinner = findViewById<Spinner>(R.id.Spinner)
         if (spinner != null) {
             val adapter = ArrayAdapter(
@@ -83,6 +84,10 @@ class AdminAddMeal : AppCompatActivity() {
 
         }
 
+
+        bBtn.setOnClickListener{
+            this.finish()
+        }
         canBtn.setOnClickListener{
             this.finish()
         }

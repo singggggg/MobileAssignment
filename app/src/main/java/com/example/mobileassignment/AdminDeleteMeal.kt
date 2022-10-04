@@ -22,6 +22,8 @@ class AdminDeleteMeal : AppCompatActivity() {
 
         val nameET = findViewById<EditText>(R.id.meal_EditText)
         val mealDelBtn = findViewById<Button>(R.id.meal_deleteBtn)
+        val bBtn = findViewById<Button>(R.id.b_button)
+
 
         meal_deleteBtn.setOnClickListener{
 
@@ -31,6 +33,10 @@ class AdminDeleteMeal : AppCompatActivity() {
             }else {
                 deleteData(mealInput)
             }
+        }
+
+        bBtn.setOnClickListener{
+            this.finish()
         }
     }
 

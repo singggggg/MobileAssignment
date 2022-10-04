@@ -5,6 +5,7 @@ import android.content.ContentValues
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobileassignment.R
@@ -21,12 +22,18 @@ class AdminViewMeal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_view_meal)
 
+        val bBtn = findViewById<Button>(R.id.b_button)
+
         userRecyclerview = findViewById(R.id.MealMenuList)
         userRecyclerview.layoutManager = LinearLayoutManager(this)
         userRecyclerview.setHasFixedSize(true)
 
         userArrayList = arrayListOf<MealMenu>()
         getUserData()
+
+        bBtn.setOnClickListener{
+            this.finish()
+        }
 
     }
 
