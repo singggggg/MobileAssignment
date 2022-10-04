@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileAssignment">
         <activity
+            android:name=".MealAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".MealDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDeleteMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminViewMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUpdateMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAddMeal"
+            android:exported="false" />
+        <activity
             android:name=".AdminMainActivity"
             android:exported="false" />
         <activity

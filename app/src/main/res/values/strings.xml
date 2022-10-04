@@ -17,4 +17,17 @@
     <string name="ic_orderAdmin">ic_order</string>
     <string name="ic_recommendationAdmin">ic_recommendation</string>
     <string name="changeRole">Change Role</string>
+    <string name="EnterMealName">Enter Meal Name</string>
+    <string name="MealDescription">Meal Description</string>
+    <string name="Price">Price</string>
+    <string name="name_textView">Name</string>
+    <string name="desc">Description</string>
+    <string name="price">Price</string>
+    <string name="Category">Category</string>
+
+    <string-array name="MealCat">
+        <item>Ala-Cart</item>
+        <item>Weekly Meal Plan</item>
+        <item>Monthly Meal Plan</item>
+    </string-array>
 </resources>
