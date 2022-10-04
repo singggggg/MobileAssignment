@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "935957237644",
+    "project_id": "bait2073-mobile-assignment",
+    "storage_bucket": "bait2073-mobile-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935957237644:android:582c2b3afba3d0dbdb50a9",
+        "android_client_info": {
+          "package_name": "com.example.mobileassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935957237644-25ir4psnjaoft21fjbphv43k226b8g5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj8pKfIdoOCfk1Of2BQfnhoyKJsPFvnL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935957237644-25ir4psnjaoft21fjbphv43k226b8g5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
