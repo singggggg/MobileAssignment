@@ -4,7 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/Desktop/BAIT2073 Mobile Application Development/MobileAssignment/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_add.xml" value="0.242" />
         <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_menu.xml" value="0.242" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_add_recommentdation.xml" value="0.2" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_admin_main.xml" value="0.2164855072463768" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_admin_recommendation.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_recommendation_list.xml" value="0.264" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_test.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_update_recommendation_details.xml" value="0.2164855072463768" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_update_recommendation_list.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/fragment_admin_home.xml" value="0.2164855072463768" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/fragment_admin_meal_menu.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/fragment_admin_recommendation.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/recommendation_items.xml" value="0.4" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/recommendation_update_items.xml" value="0.1859375" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/test.xml" value="0.2164855072463768" />
+        <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/update_recommendation_dialog.xml" value="0.1859375" />
         <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
         <entry key="..\:/Users\Asus\AndroidStudioProjects\MobileAssignment\app\src\main\res\layout\activity_main.xml" />
       </map>

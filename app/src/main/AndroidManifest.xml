@@ -19,6 +19,28 @@
             android:name=".Admin.AddRecommentdationActivity"
             android:exported="false" />
         <activity
+            android:name=".MealAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".MealDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDeleteMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminViewMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminUpdateMeal"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAddMeal"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
+        <activity
             android:name=".AdminMainActivity"
             android:exported="false" />
         <activity

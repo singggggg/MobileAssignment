@@ -7,9 +7,8 @@ import com.example.mobileassignment.AdminFragment.AdminHomeFragment
 import com.example.mobileassignment.AdminFragment.AdminMealMenuFragment
 import com.example.mobileassignment.AdminFragment.AdminOrderFragment
 import com.example.mobileassignment.AdminFragment.AdminRecommendationFragment
-import com.example.mobileassignment.Fragment.*
 import kotlinx.android.synthetic.main.activity_admin_main.*
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 class AdminMainActivity : AppCompatActivity() {
 

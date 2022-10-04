@@ -15,5 +15,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/recommendation_items" />
+        tools:listitem="@layout/recommendation_admin_items" />
 </androidx.constraintlayout.widget.ConstraintLayout>

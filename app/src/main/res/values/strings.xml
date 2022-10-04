@@ -30,4 +30,22 @@
     <string name="retrieveBtn">Retrieve</string>
     <string name="updateBtn">Update</string>
     <string name="deleteBtn">Delete</string>
+    <string name="EnterMealName">Enter Meal Name</string>
+    <string name="MealDescription">Meal Description</string>
+    <string name="Price">Price</string>
+    <string name="name_textView">Name</string>
+    <string name="desc">Description</string>
+    <string name="price">Price</string>
+    <string name="Category">Category</string>
+
+    <string-array name="MealCat">
+        <item>Ala-Cart</item>
+        <item>Weekly Meal Plan</item>
+        <item>Monthly Meal Plan</item>
+    </string-array>
+    <string name="email">Email</string>
+    <string name="create_account">Don\'t have an account? Create here</string>
+    <string name="create">Create New Account</string>
+    <string name="register">Register</string>
+    <string name="already_register">Already Register? Login here</string>
 </resources>

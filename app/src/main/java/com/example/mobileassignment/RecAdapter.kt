@@ -21,7 +21,7 @@ class RecAdapter (private val recommendationList : ArrayList<RecommendationAdmin
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(
-            R.layout.recommendation_items,
+            R.layout.recommendation_admin_items,
             parent,false)
         return MyViewHolder(itemView, mListener)
 
