@@ -22,4 +22,15 @@
     <string name="create">Create New Account</string>
     <string name="register">Register</string>
     <string name="already_register">Already Register? Login here</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="forgetpw">Forget password?</string>
+    <string name="signout">Sign Out</string>
+    <string name="forgotpw_title">Forget Password</string>
+    <string name="forgotpwdetail">Enter your email to receive the reset link.</string>
+    <string name="submit">Submit</string>
+    <string-array name="role">
+        <item>User</item>
+        <item>Admin</item>
+    </string-array>
 </resources>

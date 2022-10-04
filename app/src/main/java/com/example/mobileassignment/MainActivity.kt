@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
 import com.example.mobileassignment.Fragment.*
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import java.time.Instant
 import java.time.OffsetDateTime
@@ -26,9 +27,14 @@ class MainActivity : AppCompatActivity() {
     private val menuFragment = MenuFragment()
     private val cartFragment = CartFragment()
 
+    private lateinit var user:FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        user = FirebaseAuth.getInstance()
+        val signOut_btn:Button = findViewById(R.id.signOut_btn)
 
         btmNav.setOnItemSelectedListener {
             when(it.itemId){
@@ -44,6 +50,13 @@ class MainActivity : AppCompatActivity() {
         val chgRoleBtn = findViewById<Button>(R.id.changeRoleBtn)
         chgRoleBtn.setOnClickListener{
             val intent = Intent(this,AdminMainActivity::class.java)
+            startActivity(intent)
+        }
+
+        signOut_btn.setOnClickListener {
+            user.signOut()
+            val intent = Intent(this,LoginPage::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
 
