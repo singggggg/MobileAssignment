@@ -42,6 +42,12 @@ class UpdateRecommendationDetailsActivity : AppCompatActivity() {
             )
         }
 
+        val backBtn : Button = findViewById(R.id.back_button)
+
+        backBtn.setOnClickListener {
+            this.finish()
+        }
+
     }
 
     private fun initView() {
