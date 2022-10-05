@@ -28,12 +28,6 @@ class HomePageFragment : Fragment() {
         user = FirebaseAuth.getInstance()
         val signOut_btn: Button = view.findViewById(R.id.signOut_btn)
 
-        val chgRoleBtn:Button = view.findViewById(R.id.changeRoleBtn)
-        chgRoleBtn.setOnClickListener{
-            val intent = Intent(this.context, AdminMainActivity::class.java)
-            startActivity(intent)
-        }
-
         signOut_btn.setOnClickListener {
             user.signOut()
             val intent = Intent(this.context, LoginPage::class.java)

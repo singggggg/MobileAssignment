@@ -55,15 +55,15 @@ class MainActivity : AppCompatActivity() {
         toggle.syncState()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        replaceFragment(homepageFragment)
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.menu_homepage -> Toast.makeText(applicationContext,"Clicked home",Toast.LENGTH_SHORT).show()
-                R.id.menu_recommendation -> Toast.makeText(applicationContext,"Clicked recommendation",Toast.LENGTH_SHORT).show()
-                R.id.menu_mealPlan -> Toast.makeText(applicationContext,"Clicked meal plan",Toast.LENGTH_SHORT).show()
-                R.id.menu_menu -> Toast.makeText(applicationContext,"Clicked meal menu",Toast.LENGTH_SHORT).show()
-                R.id.menu_cart -> Toast.makeText(applicationContext,"Clicked cart",Toast.LENGTH_SHORT).show()
-                R.id.user_profile -> Toast.makeText(applicationContext,"Clicked user profile",Toast.LENGTH_SHORT).show()
+                R.id.menu_homepage ->replaceFragment(homepageFragment)
+                R.id.menu_recommendation -> replaceFragment(recommendationFragment)
+                R.id.menu_mealPlan -> replaceFragment(mealPlanFragment)
+                R.id.menu_menu -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
+                R.id.menu_cart -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
+                R.id.user_profile -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
                 R.id.logout -> signOut()
             }
             true
