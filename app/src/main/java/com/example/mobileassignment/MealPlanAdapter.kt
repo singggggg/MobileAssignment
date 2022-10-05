@@ -32,8 +32,11 @@ class MealPlanAdapter (private val mealPlan : ArrayList<MealPlan>) : RecyclerVie
 
         val currentitem = mealPlan[position]
 
+        var totalCaloriesCaptured : Double = 0.0
+
         holder.mealName.text = currentitem.mealName
         holder.mealIsConsumed.isChecked = currentitem.mealIsConsumed == "1"
+        holder.mealIsConsumed.tag = currentitem.mealCalories
 
         holder.mealIsConsumed.setOnClickListener(){
             val db = Firebase.database
@@ -41,6 +44,7 @@ class MealPlanAdapter (private val mealPlan : ArrayList<MealPlan>) : RecyclerVie
             if(holder.mealIsConsumed.isChecked){
                 val mp = MealPlan(currentitem.mealName,currentitem.mealCalories,"1",currentitem.mealPlanStartDate)
                 myRef.child(currentitem.mealName.toString()).setValue(mp).addOnCompleteListener{}
+                totalCaloriesCaptured += currentitem.mealCalories?.toDouble()!!
             }
             else{
                 val mp = MealPlan(currentitem.mealName,currentitem.mealCalories,"0",currentitem.mealPlanStartDate)

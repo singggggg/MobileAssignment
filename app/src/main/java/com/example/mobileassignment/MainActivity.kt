@@ -100,8 +100,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_recommendation-> replaceFragment(recommendationFragment)
                 R.id.menu_mealPlan-> replaceFragment(mealPlanFragment)
                 R.id.menu_homepage-> replaceFragment(homepageFragment)
-                R.id.menu_menu-> replaceFragment(menuFragment)
-                R.id.menu_cart-> replaceFragment(cartFragment)
+//                R.id.menu_menu-> replaceFragment(menuFragment)
+//                R.id.menu_cart-> replaceFragment(cartFragment)
             }
             true
         }

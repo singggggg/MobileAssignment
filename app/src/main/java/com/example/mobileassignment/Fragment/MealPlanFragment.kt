@@ -8,14 +8,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mobileassignment.*
+import com.example.mobileassignment.MealPlan
+import com.example.mobileassignment.MealPlanAdapter
 import com.example.mobileassignment.R
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_meal_plan.*
 import java.io.*
+import java.time.LocalDateTime
+import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -83,40 +87,61 @@ class MealPlanFragment : Fragment() {
                 }
             }
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
+
         })
     }
 
-    fun updateCalories(){
-        /*val currentDate = SimpleDateFormat("dd")*/
+    private fun updateCalories(){
+
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+
+        val dayOfWeek = day%7
+        val week = (day/7)+1
+
+        val currentDate:String = "W"+week.toString()+"_"+month.toString()+"_"+year.toString()
 
         /*val times = retreiveLocal("timestamp")*/
+        monthlyCal = if (!retreiveLocal("$month$year Monthly").isNullOrEmpty()) retreiveLocal("$month$year Monthly") else "0.0"
+        weeklyCal = if (!retreiveLocal("$currentDate Weekly").isNullOrEmpty()) retreiveLocal("$currentDate Weekly") else "0.0"
 
-        monthlyCal = if (!retreiveLocal("monthly").isNullOrEmpty()) retreiveLocal("monthly") else "N/A"
-        weeklyCal = if (!retreiveLocal("weekly").isNullOrEmpty()) retreiveLocal("weekly") else "N/A"
+        var initialMonthly = monthlyCal
 
-        tv_weeklyCalories.text = weeklyCal+" KCAL"
-        tv_monthlyCalories.text = monthlyCal+" KCAL"
+        val query =
+            FirebaseDatabase.getInstance().getReference("MealPlan").orderByChild("mealIsConsumed")
+                .equalTo("1")
 
-/*        if(currentDate.toString().toInt() - times.toInt()>7){
-            storeLocal(currentDate.toString(),"timestamp")
 
-            if(retreiveLocal("monthCount")=="4"){
-                storeLocal("0","monthCount")
+        query.addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var wcalc:Double = 0.0
+                var mcalc:Double = 0.0
+                mcalc = initialMonthly.toDouble()
+                for (userSnapshot in snapshot.children) {
+                    val user = userSnapshot.getValue(MealPlan::class.java)
+                    wcalc += user?.mealCalories?.toDouble()!!
+                    mcalc += user?.mealCalories?.toDouble()!!
+                }
+
+                weeklyCal = wcalc.toString()
+                monthlyCal = mcalc.toString()
+
+                tv_weeklyCalories.text = weeklyCal+" KCAL"
+                tv_monthlyCalories.text = monthlyCal+" KCAL"
+
+                if (weeklyCal != "0.0"){
+                    storeLocal(weeklyCal, "$currentDate Weekly")
+                }
+                if (monthlyCal != "0.0" && dayOfWeek == 7) {
+                    storeLocal(monthlyCal, "$month$year Monthly")
+                }
             }
-            else{
-                storeLocal("1", "monthCount")
+            override fun onCancelled(error: DatabaseError) {
             }
-        }*/
-
-
-        if (weeklyCal != "N/A"){
-            storeLocal(weeklyCal, "weekly")
-        }
-        if (monthlyCal != "N/A") {
-            storeLocal(monthlyCal, "monthly")
-        }
+        })
     }
 
     fun storeLocal(data: String, type: String){
