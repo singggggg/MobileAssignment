@@ -32,6 +32,12 @@ class UpdateRecommendationListActivity : AppCompatActivity() {
         userArrayList = arrayListOf<RecommendationAdmin>()
         getUserData()
 
+        val backBtn : Button = findViewById(R.id.back_button)
+
+        backBtn.setOnClickListener {
+            this.finish()
+        }
+
     }
 
     private fun getUserData() {
