@@ -6,6 +6,10 @@ import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
+import java.io.BufferedReader
+import java.io.FileInputStream
+import java.io.InputStreamReader
+import java.lang.StringBuilder
 
 class NavHeader : AppCompatActivity() {
 
@@ -15,36 +19,28 @@ class NavHeader : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nav_header)
         user = FirebaseAuth.getInstance()
-        setProfile(user.currentUser)
-    }
 
-    private fun setProfile(currentUser: FirebaseUser?) {
         val userName: TextView = findViewById(R.id.user_name)
         val userEmail: TextView = findViewById(R.id.user_email)
 
-        dbref = FirebaseDatabase.getInstance().getReference("User")
+        val filename = "userdata"
+        if(filename.trim()!=""){
+            val fileInputStream: FileInputStream? = openFileInput(filename)
+            val inputStreamReader = InputStreamReader(fileInputStream)
+            val bufferedReader = BufferedReader(inputStreamReader)
+            val stringBuilderName = StringBuilder()
+            val stringBuilderEmail = StringBuilder()
+            var text:String?
 
-        dbref.addValueEventListener(object : ValueEventListener {
+            text = bufferedReader.readLine()
+            stringBuilderName.append(text)
 
-            override fun onDataChange(snapshot: DataSnapshot) {
+            text = bufferedReader.readLine()
+            stringBuilderEmail.append(text)
 
-                if (snapshot.exists()){
-
-                    for (userSnapshot in snapshot.children){
-                        if (currentUser != null) {
-                            if(userSnapshot.key.equals(currentUser.uid)){
-                                userName.text = userSnapshot.child("firstname").value.toString().trim()
-                                userEmail.text = userSnapshot.child("email").value.toString().trim()
-                            }
-                        }
-                    }
-                    user.signOut()
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                user.signOut()
-            }
-        })
+            userName.setText(stringBuilderName.toString()).toString()
+            userEmail.setText(stringBuilderEmail.toString()).toString()
+        }
     }
+
 }

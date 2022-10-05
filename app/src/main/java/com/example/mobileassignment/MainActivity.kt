@@ -23,6 +23,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.content_main.view.*
+import java.lang.Exception
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneId
@@ -65,31 +66,28 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.menu_recommendation-> {
-                    tab.title = "Recommendation";
+                    tab.title = "Recommendation"
                     replaceFragment(recommendationFragment)
                 }
                 R.id.menu_mealPlan-> {
-                    tab.title = "Meal Plan";
+                    tab.title = "Meal Plan"
                     replaceFragment(mealPlanFragment)
                 }
                 R.id.menu_homepage-> {
-                    tab.title = "Eat Heal";
+                    tab.title = "Eat Heal"
                     replaceFragment(homepageFragment)
                 }
-                R.id.menu_menu-> {
-//                    tab.title = "Menu";
-//                    replaceFragment(menuFragment)
+/*                R.id.menu_menu-> {
+                    tab.title = "Menu";
+                    replaceFragment(menuFragment)
                 }
                 R.id.menu_cart-> {
-//                    tab.title = "Cart";
-//                    replaceFragment(cartFragment)
-                }
-                R.id.menu_homepage ->replaceFragment(homepageFragment)
-                R.id.menu_recommendation -> replaceFragment(recommendationFragment)
-                R.id.menu_mealPlan -> replaceFragment(mealPlanFragment)
+                    tab.title = "Cart";
+                    replaceFragment(cartFragment)
+                }*/
                 R.id.menu_menu -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
                 R.id.menu_cart -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
-                R.id.user_profile -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
+                R.id.user_profile -> startActivity(Intent(this, UserProfile::class.java))
                 R.id.logout -> signOut()
             }
             true
@@ -97,9 +95,18 @@ class MainActivity : AppCompatActivity() {
 
         content_main.btmNav.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.menu_recommendation-> replaceFragment(recommendationFragment)
-                R.id.menu_mealPlan-> replaceFragment(mealPlanFragment)
-                R.id.menu_homepage-> replaceFragment(homepageFragment)
+                R.id.menu_recommendation-> {
+                    tab.title = "Recommendation"
+                    replaceFragment(recommendationFragment)
+                }
+                R.id.menu_mealPlan-> {
+                    tab.title = "Meal Plan"
+                    replaceFragment(mealPlanFragment)
+                }
+                R.id.menu_homepage-> {
+                    tab.title = "Eat Heal"
+                    replaceFragment(homepageFragment)
+                }
                 R.id.menu_menu-> replaceFragment(menuFragment)
                 R.id.menu_cart-> replaceFragment(cartFragment)
             }
@@ -110,6 +117,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun signOut(){
         user.signOut()
+        try{
+            deleteFile("userdata")
+        }catch (e:Exception){
+            e.printStackTrace()
+            false
+        }
         val intent = Intent(this, LoginPage::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
@@ -130,18 +143,4 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-/*    private fun getCurrentMillisDateTime(): Long?{
-        val currentMillis = System.currentTimeMillis()
-        return currentMillis + 28800000
-    }
-
-    private fun getDateTime(s: String): String? {
-        try {
-            val sdf = SimpleDateFormat("MM/dd/yyyy hh:mm:ss")
-            val netDate = Date(s.toLong())
-            return sdf.format(netDate)
-        } catch (e: Exception) {
-            return e.toString()
-        }
-    }*/
 }

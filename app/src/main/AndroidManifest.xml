@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileAssignment">
         <activity
+            android:name=".EditUser"
+            android:exported="false" />
+        <activity
             android:name=".NavHeader"
             android:exported="false" />
         <activity
