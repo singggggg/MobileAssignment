@@ -17,7 +17,6 @@
             android:name=".RecommendationDetails"
             android:exported="false" />
         <activity
-            android:name=".AdminMainActivity"
             android:name=".UserProfile"
             android:exported="false" />
         <activity

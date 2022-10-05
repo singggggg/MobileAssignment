@@ -4,6 +4,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="headtitle">Eat Heal</string>
     <!-- TODO: Remove or change this placeholder text -->、
     <string name="menu_homepage">Homepage</string>
     <string name="menu_menu">Menu</string>
@@ -45,9 +46,9 @@
     </string-array>
     <string name="email">Email</string>
     <string name="create_account">Don\'t have an account? Create here</string>
-    <string name="create">Create New Account</string>
+    <string name="create">REGISTER ACCOUNT</string>
     <string name="register">Register</string>
-    <string name="already_register">Already Register? Login here</string>
+    <string name="already_register">Login here</string>
     <string name="firstname">First Name</string>
     <string name="lastname">Last Name</string>
     <string name="forgetpw">Forget password?</string>
@@ -62,4 +63,18 @@
     </string-array>
     <string name="close">Close</string>
     <string name="open">Open</string>
+    <string name="title_activity_recommendation_details">RecommendationDetails</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="DailyCalories">Daily Calories Consumed</string>
+    <string name="WeeklyCalories">Weekly Calories Consumed</string>
+    <string name="MonthlyCalories">Monthly Calories Consumed</string>
+    <string name="mealPlanWeek">Meal For This Week</string>
+    <string name="eatHeal">Eat Heal</string>
+    <string name="slogan">Eat Right Be Bright</string>
 </resources>
