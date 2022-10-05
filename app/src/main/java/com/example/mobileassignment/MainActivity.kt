@@ -107,8 +107,8 @@ class MainActivity : AppCompatActivity() {
                     tab.title = "Eat Heal"
                     replaceFragment(homepageFragment)
                 }
-                R.id.menu_menu-> replaceFragment(menuFragment)
-                R.id.menu_cart-> replaceFragment(cartFragment)
+//                R.id.menu_menu-> replaceFragment(menuFragment)
+//                R.id.menu_cart-> replaceFragment(cartFragment)
             }
             true
         }
