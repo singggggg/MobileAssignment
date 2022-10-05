@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
 import com.example.mobileassignment.Fragment.*
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -44,20 +45,45 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(topAppBar)
 
+
+
         user = FirebaseAuth.getInstance()
 
         val drawerLayout:DrawerLayout = findViewById(R.id.drawerLayout)
         val navView:NavigationView = findViewById(R.id.nav_view)
+        val tab = findViewById<MaterialToolbar>(R.id.topAppBar)
 
         toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         toggle.isDrawerIndicatorEnabled = true
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+        btmNav.selectedItemId = R.id.menu_homepage
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         replaceFragment(homepageFragment)
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
+                R.id.menu_recommendation-> {
+                    tab.title = "Recommendation";
+                    replaceFragment(recommendationFragment)
+                }
+                R.id.menu_mealPlan-> {
+                    tab.title = "Meal Plan";
+                    replaceFragment(mealPlanFragment)
+                }
+                R.id.menu_homepage-> {
+                    tab.title = "Eat Heal";
+                    replaceFragment(homepageFragment)
+                }
+                R.id.menu_menu-> {
+//                    tab.title = "Menu";
+//                    replaceFragment(menuFragment)
+                }
+                R.id.menu_cart-> {
+//                    tab.title = "Cart";
+//                    replaceFragment(cartFragment)
+                }
                 R.id.menu_homepage ->replaceFragment(homepageFragment)
                 R.id.menu_recommendation -> replaceFragment(recommendationFragment)
                 R.id.menu_mealPlan -> replaceFragment(mealPlanFragment)
