@@ -25,7 +25,7 @@ class AdminMainActivity : AppCompatActivity() {
 
     private val adminHomepageFragment = AdminHomeFragment()
     private val adminMenuFragment = AdminMealMenuFragment()
-    private val adminOrderHistory = AdminOrderFragment()
+//    private val adminOrderHistory = AdminOrderFragment()
     private val adminRecommendationFragment = AdminRecommendationFragment()
 
     private lateinit var toggle: ActionBarDrawerToggle
@@ -61,10 +61,6 @@ class AdminMainActivity : AppCompatActivity() {
                     tab.title = "Menu"
                     replaceFragment(adminMenuFragment)
                 }
-                R.id.ic_order-> {
-                    tab.title = "Order"
-                    replaceFragment(adminOrderHistory)
-                }
                 R.id.ic_recommendationAdmin-> {
                     tab.title = "Recommendation"
                     replaceFragment(adminRecommendationFragment)
@@ -87,10 +83,6 @@ class AdminMainActivity : AppCompatActivity() {
                 R.id.ic_menu-> {
                     tab.title = "Menu"
                     replaceFragment(adminMenuFragment)
-                }
-                R.id.ic_order-> {
-                    tab.title = "Order"
-                    replaceFragment(adminOrderHistory)
                 }
                 R.id.ic_recommendationAdmin-> {
                     tab.title = "Recommendation";

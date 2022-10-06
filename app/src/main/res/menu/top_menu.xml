@@ -17,14 +17,6 @@
         android:icon="@drawable/dinner"
         android:title="@string/menu_mealPlan" />
 
-    <item
-        android:id="@+id/menu_menu"
-        android:icon="@drawable/menu"
-        android:title="@string/menu_menu" />
-    <item
-        android:id="@+id/menu_cart"
-        android:icon="@drawable/cart"
-        android:title="@string/menu_cart" />
     <item android:title="">
         <menu>
             <item

@@ -13,12 +13,6 @@
         android:id="@+id/ic_menu"
         android:icon="@drawable/menu"
         android:title="@string/ic_menuAdmin" />
-
-    <item
-        android:id="@+id/ic_order"
-        android:icon="@drawable/ic_baseline_access_time_24"
-        android:title="@string/ic_orderAdmin" />
-
     <item
         android:id="@+id/ic_recommendationAdmin"
         android:icon="@drawable/chat"

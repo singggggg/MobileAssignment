@@ -70,8 +70,8 @@ class MainActivity : AppCompatActivity() {
                     tab.title = "Cart";
                     replaceFragment(cartFragment)
                 }*/
-                R.id.menu_menu -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
-                R.id.menu_cart -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
+//                R.id.menu_menu -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
+//                R.id.menu_cart -> Toast.makeText(this,"Still under development",Toast.LENGTH_SHORT).show()
                 R.id.user_profile -> startActivity(Intent(this, UserProfile::class.java))
                 R.id.logout -> signOut()
             }
