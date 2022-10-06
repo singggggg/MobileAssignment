@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
     <item
         android:id="@+id/ic_home"
@@ -20,4 +23,9 @@
         android:id="@+id/ic_recommendationAdmin"
         android:icon="@drawable/chat"
         android:title="@string/ic_recommendationAdmin" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:title="@string/signout" />
+
 </menu>

@@ -23,17 +23,7 @@
                 android:id="@+id/appBarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white">
-
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/topAppBar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:menu="@menu/top_menu"
-                    app:title="EatHeal"
-                    app:titleCentered="true" />
-
-            </com.google.android.material.appbar.AppBarLayout>
+                android:background="@color/white"/>
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <TextView
