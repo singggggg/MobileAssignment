@@ -15,18 +15,21 @@
         <entry key="..\:/Users/User/Desktop/BAIT2073 Mobile Application Development/MobileAssignment/app/src/main/res/layout/fragment_home_page.xml" value="0.3292572463768116" />
         <entry key="..\:/Users/User/Desktop/BAIT2073 Mobile Application Development/MobileAssignment/app/src/main/res/layout/recommendation_items.xml" value="0.17553191489361702" />
         <entry key="..\:/Users/alexn/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/activity_add_recommentdation.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/activity_admin_main.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/activity_admin_update_meal.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/activity_main.xml" value="0.17239583333333333" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/activity_update_recommendation_details.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/fragment_admin_home.xml" value="0.17239583333333333" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/fragment_admin_meal_menu.xml" value="0.17239583333333333" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/meal_update_dialog.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/recommendation_admin_items.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/recommendation_update_items.xml" value="0.18840579710144928" />
-        <entry key="..\:/Users/alexn/AndroidStudioProjects/testGit/app/src/main/res/layout/update_recommendation_dialog.xml" value="0.18840579710144928" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_menu.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_order.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/ic_outline_dining_24.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/layout_bg.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/layout_bg2.xml" value="0.3635" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/drawable/layout_bg3.xml" value="0.3635" />
         <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/activity_recommendation_details.xml" value="0.24114583333333334" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/layout/nav_header.xml" value="0.3625" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.247" />
+        <entry key="..\:/Users/weihe/AndroidStudioProjects/MobileAssignment/app/src/main/res/mipmap-anydpi-v26/ic_launcher_icon.xml" value="0.3635" />
         <entry key="..\:/Users\Asus\AndroidStudioProjects\MobileAssignment\app\src\main\res\layout\activity_main.xml" />
       </map>
     </option>
