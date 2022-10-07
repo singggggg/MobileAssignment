@@ -66,8 +66,8 @@ class UpdateRecommendationDetailsActivity : AppCompatActivity() {
         tvNameTitle.text = intent.getStringExtra("recName")
         tvDesc.text = intent.getStringExtra("recDesc")
         tvTime.text = intent.getStringExtra("uploadTime")
-        likeTV.text = intent.getStringExtra("like").toString()
-        dislikeTV.text = intent.getStringExtra("dislike").toString()
+        //likeTV.text = intent.getStringExtra("like").toString()
+        //dislikeTV.text = intent.getStringExtra("dislike").toString()
 
     }
 
