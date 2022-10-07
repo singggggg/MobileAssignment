@@ -10,10 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:editable="false"
         android:hint="@string/nameTitle_TextView"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:inputType="none"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etDesc"

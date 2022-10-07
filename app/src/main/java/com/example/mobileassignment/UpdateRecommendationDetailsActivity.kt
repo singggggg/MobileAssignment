@@ -93,6 +93,7 @@ class UpdateRecommendationDetailsActivity : AppCompatActivity() {
         etTime.setText(intent.getStringExtra("uploadTime").toString())
 
         mDialog.setTitle("Updating $recName Record")
+        etRecNameTitle.setTextIsSelectable(false)
 
         val alertDialog = mDialog.create()
         alertDialog.show()
